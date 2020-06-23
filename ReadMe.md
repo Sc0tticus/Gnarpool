@@ -24,6 +24,9 @@ Traffic up the ski areas in Colorado has gotten worse year after year and has ma
 
   Run "rails s" in the backend terminal. Run "lite-server" in the frontend terminal.
 
+* YouTube Walkthrough:
+  https://www.youtube.com/watch?v=1F-Q6xSGX_U&feature=youtu.be
+
 * Walkthrough / Functionality:
 
 From the landing page 'http://localhost:3001/#main'decide if you are looking for a ride up to the mountains (this puts you in the Riders category) or wish to provide a ride up to the mountains (this puts you in the Drivers category).

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="driversList.css" type="text/css">
+  <title>Drivers List</title>
+
+</head>
+<h1>Gnarpool</h1>
+<body>
+
+  <div class="filter-row">
+
+    <h2>Filter Driver By Resort</h2>
+    <p></p>
+    <form action="http://localhost:3001/driversList.html" method="GET">
+      <select name="resort" id="dropdown1"></select>
+      <input type='submit' />
+    </form>
+    
+
+    <h2>Filter Driver By Date-Time</h2>
+    <form action="http://localhost:3001/driversList.html" method="GET">
+      <select name="date" id="dropdown2"></select>
+      <input type='submit' />
+    </form>
+
+    <h2>Filter Driver By Pass</h2>
+    <form action="http://localhost:3001/driversList.html" method="GET">
+      <select name="pass" id="dropdown3"></select>
+      <input type='submit' />
+    </form>
+  </div>
+  
+
+  <div class=drivers>
+  <ul id='drivers-list'></ul>
+  </div>
+</body>
+<script src = 'driversList.js'></script>
+</html>

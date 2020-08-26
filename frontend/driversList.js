@@ -60,7 +60,6 @@ fetch(driversURL)
     let option = document.createElement('option')
     option.innerText = element
     option.value = element
-    console.log(dropdown)
     dropdown.appendChild(option)
   }
 
@@ -68,11 +67,9 @@ fetch(driversURL)
     let option = document.createElement('option')
     option.innerText = "Ascending"
     option.value = "asc"
-    console.log(dropdown)
     dropdown.appendChild(option)
     option = document.createElement('option')
     option.innerText = "Descending"
     option.value = "desc"
-    console.log(dropdown)
     dropdown.appendChild(option)
   }

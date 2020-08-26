@@ -2796,3 +2796,1447 @@ Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.5ms | Allocations: 161
 Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 1.3ms | Allocations: 24444)
 
 
+Started GET "/" for ::1 at 2020-07-07 15:06:14 -0600
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/scottsinger/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/scottsinger/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 15.0ms | Allocations: 315)
+Completed 200 OK in 24ms (Views: 20.5ms | ActiveRecord: 0.0ms | Allocations: 1596)
+
+
+Started GET "/drivers" for ::1 at 2020-07-07 15:06:18 -0600
+Processing by DriversController#index as HTML
+  [1m[36mDriver Load (0.6ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (1.0ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 11]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 12]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 13]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 14]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 15]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 16]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+Completed 200 OK in 114ms (Views: 92.1ms | ActiveRecord: 3.3ms | Allocations: 25881)
+
+
+Started GET "/riders" for ::1 at 2020-07-07 15:07:14 -0600
+Started GET "/drivers" for ::1 at 2020-07-07 15:07:14 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DriversController#index as */*
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 11]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 12]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 13]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.6ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 14]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 15]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 16]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 1.7ms | Allocations: 9554)
+
+
+Processing by RidersController#index as */*
+  [1m[36mRider Load (0.7ms)[0m  [1m[34mSELECT "riders".* FROM "riders"[0m
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.8ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 11]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 12]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.6ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 13]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 14]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 15]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 16]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 17]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 18]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+Completed 200 OK in 132ms (Views: 123.7ms | ActiveRecord: 4.4ms | Allocations: 19251)
+
+
+Started GET "/riders" for ::1 at 2020-07-09 11:53:46 -0600
+Started GET "/drivers" for ::1 at 2020-07-09 11:53:46 -0600
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DriversController#index as */*
+Processing by RidersController#index as */*
+  [1m[36mDriver Load (0.6ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  [1m[36mRider Load (0.7ms)[0m  [1m[34mSELECT "riders".* FROM "riders"[0m
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.7ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 11]]
+  [1m[36mRide Load (0.5ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 11]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 12]]
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 12]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 13]]
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 13]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 14]]
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 14]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 15]]
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 15]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 16]]
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 16]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 17]]
+Completed 200 OK in 95ms (Views: 85.4ms | ActiveRecord: 3.6ms | Allocations: 41882)
+
+
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 18]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+Completed 200 OK in 92ms (Views: 87.3ms | ActiveRecord: 2.3ms | Allocations: 43365)
+
+
+Started GET "/drivers" for ::1 at 2020-07-09 11:53:50 -0600
+Processing by DriversController#index as */*
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.4ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 11]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 12]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 13]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 14]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 15]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 16]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 1.1ms | Allocations: 8930)
+
+
+Started GET "/drivers" for ::1 at 2020-07-09 11:53:50 -0600
+Processing by DriversController#index as */*
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 11]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 12]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 13]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (3.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 14]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 15]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 16]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+Completed 200 OK in 20ms (Views: 16.1ms | ActiveRecord: 4.1ms | Allocations: 8868)
+
+
+Started GET "/drivers?resort=Loveland" for ::1 at 2020-07-09 11:53:58 -0600
+Processing by DriversController#index as */*
+  Parameters: {"resort"=>"Loveland"}
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."resort" = ?[0m  [["resort", "Loveland"]]
+  ↳ app/controllers/drivers_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1136)
+
+
+Started GET "/drivers?resort=Loveland" for ::1 at 2020-07-09 11:53:58 -0600
+Processing by DriversController#index as */*
+  Parameters: {"resort"=>"Loveland"}
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."resort" = ?[0m  [["resort", "Loveland"]]
+  ↳ app/controllers/drivers_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1089)
+
+
+Started GET "/drivers?resort=Loveland" for ::1 at 2020-07-09 11:56:46 -0600
+Processing by DriversController#index as */*
+  Parameters: {"resort"=>"Loveland"}
+  [1m[36mDriver Load (0.4ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."resort" = ?[0m  [["resort", "Loveland"]]
+  ↳ app/controllers/drivers_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.4ms | Allocations: 1089)
+
+
+Started GET "/drivers?resort=Loveland" for ::1 at 2020-07-09 11:56:46 -0600
+Processing by DriversController#index as */*
+  Parameters: {"resort"=>"Loveland"}
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."resort" = ?[0m  [["resort", "Loveland"]]
+  ↳ app/controllers/drivers_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1089)
+
+
+Started GET "/drivers?resort=Loveland" for ::1 at 2020-07-09 11:57:09 -0600
+Processing by DriversController#index as */*
+  Parameters: {"resort"=>"Loveland"}
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."resort" = ?[0m  [["resort", "Loveland"]]
+  ↳ app/controllers/drivers_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1089)
+
+
+Started GET "/drivers?resort=Loveland" for ::1 at 2020-07-09 11:57:09 -0600
+Processing by DriversController#index as */*
+  Parameters: {"resort"=>"Loveland"}
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."resort" = ?[0m  [["resort", "Loveland"]]
+  ↳ app/controllers/drivers_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1089)
+
+
+Started GET "/drivers?resort=Loveland" for ::1 at 2020-07-09 11:57:59 -0600
+Processing by DriversController#index as */*
+  Parameters: {"resort"=>"Loveland"}
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."resort" = ?[0m  [["resort", "Loveland"]]
+  ↳ app/controllers/drivers_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1106)
+
+
+Started GET "/drivers?resort=Loveland" for ::1 at 2020-07-09 11:57:59 -0600
+Processing by DriversController#index as */*
+  Parameters: {"resort"=>"Loveland"}
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."resort" = ?[0m  [["resort", "Loveland"]]
+  ↳ app/controllers/drivers_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 1089)
+
+
+Started GET "/drivers?resort=Loveland" for ::1 at 2020-07-09 11:58:21 -0600
+Processing by DriversController#index as */*
+  Parameters: {"resort"=>"Loveland"}
+  [1m[36mDriver Load (0.6ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."resort" = ?[0m  [["resort", "Loveland"]]
+  ↳ app/controllers/drivers_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.6ms | Allocations: 1089)
+
+
+Started GET "/drivers?resort=Loveland" for ::1 at 2020-07-09 11:58:21 -0600
+Processing by DriversController#index as */*
+  Parameters: {"resort"=>"Loveland"}
+  [1m[36mDriver Load (0.5ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."resort" = ?[0m  [["resort", "Loveland"]]
+  ↳ app/controllers/drivers_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.5ms | Allocations: 1089)
+
+
+Started GET "/drivers?resort=Loveland" for ::1 at 2020-07-09 11:58:27 -0600
+Processing by DriversController#index as */*
+  Parameters: {"resort"=>"Loveland"}
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."resort" = ?[0m  [["resort", "Loveland"]]
+  ↳ app/controllers/drivers_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 1089)
+
+
+Started GET "/drivers?resort=Loveland" for ::1 at 2020-07-09 11:58:27 -0600
+Processing by DriversController#index as */*
+  Parameters: {"resort"=>"Loveland"}
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."resort" = ?[0m  [["resort", "Loveland"]]
+  ↳ app/controllers/drivers_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms | Allocations: 1089)
+
+
+Started GET "/drivers" for ::1 at 2020-07-09 16:29:55 -0600
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DriversController#index as HTML
+  [1m[36mDriver Load (0.9ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.5ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 11]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 12]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 13]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 14]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 15]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 16]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+Completed 200 OK in 64ms (Views: 52.2ms | ActiveRecord: 3.7ms | Allocations: 25679)
+
+
+Started GET "/drivers" for ::1 at 2020-07-09 16:30:30 -0600
+Started GET "/riders" for ::1 at 2020-07-09 16:30:30 -0600
+Processing by DriversController#index as */*
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 11]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 12]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 13]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 14]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 15]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 16]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.8ms | Allocations: 10191)
+
+
+Processing by RidersController#index as */*
+  [1m[36mRider Load (6.0ms)[0m  [1m[34mSELECT "riders".* FROM "riders"[0m
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (6.6ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 11]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 12]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 13]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 14]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 15]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 16]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (2.5ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 17]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 18]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+Completed 200 OK in 125ms (Views: 56.2ms | ActiveRecord: 19.3ms | Allocations: 19459)
+
+
+Started GET "/drivers" for ::1 at 2020-07-09 16:30:36 -0600
+Processing by DriversController#index as */*
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.8ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 11]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.5ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 12]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 13]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 14]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 15]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 16]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 2.1ms | Allocations: 8930)
+
+
+Started GET "/drivers" for ::1 at 2020-07-09 16:30:36 -0600
+Processing by DriversController#index as */*
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 11]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.7ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 12]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 13]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 14]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 15]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 16]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 1.5ms | Allocations: 8868)
+
+
+Started GET "/drivers?resort=Copper%20Mountain" for ::1 at 2020-07-09 16:30:40 -0600
+Processing by DriversController#index as */*
+  Parameters: {"resort"=>"Copper Mountain"}
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."resort" = ?[0m  [["resort", "Copper Mountain"]]
+  ↳ app/controllers/drivers_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1120)
+
+
+Started GET "/drivers?resort=Copper%20Mountain" for ::1 at 2020-07-09 16:30:40 -0600
+Processing by DriversController#index as */*
+  Parameters: {"resort"=>"Copper Mountain"}
+  [1m[36mDriver Load (0.5ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."resort" = ?[0m  [["resort", "Copper Mountain"]]
+  ↳ app/controllers/drivers_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 1090)
+
+
+Started GET "/riders" for ::1 at 2020-07-09 16:30:41 -0600
+Processing by RidersController#index as */*
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT "riders".* FROM "riders"[0m
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 11]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 12]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+Started GET "/drivers" for ::1 at 2020-07-09 16:30:41 -0600
+Processing by DriversController#index as */*
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 11]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 12]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 13]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.4ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 14]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 15]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 16]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 1.3ms | Allocations: 8886)
+
+
+Started GET "/drivers/14" for ::1 at 2020-07-09 16:30:41 -0600
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 13]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+Processing by DriversController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:26:in `show'
+  [1m[36mRider Load (0.8ms)[0m  [1m[34mSELECT "riders".* FROM "riders" INNER JOIN "rides" ON "riders"."id" = "rides"."rider_id" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 14]]
+  ↳ app/controllers/drivers_controller.rb:27:in `show'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 14]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 15]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 16]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 17]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 18]]
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 14]]
+  ↳ app/controllers/drivers_controller.rb:27:in `show'
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 1.2ms | Allocations: 9240)
+
+
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+Completed 200 OK in 70ms (Views: 68.1ms | ActiveRecord: 1.5ms | Allocations: 26401)
+
+
+Started POST "/drivers" for ::1 at 2020-07-09 16:32:45 -0600
+Processing by DriversController#create as HTML
+  Parameters: {"name"=>"Yeezy", "phone"=>"65465746547447", "email"=>"yeezy@mail.com", "resort"=>"Aspen", "pass"=>"Ikon", "Venmo"=>"yeezy6758758", "time"=>"2020-08-08T23:38"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/drivers_controller.rb:31:in `create'
+  [1m[36mDriver Create (0.8ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "phone", "email", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Yeezy"], ["phone", "65465746547447"], ["email", "yeezy@mail.com"], ["resort", "Aspen"], ["pass", "Ikon"], ["Venmo", "yeezy6758758"], ["created_at", "2020-07-09 22:32:45.690882"], ["updated_at", "2020-07-09 22:32:45.690882"]]
+  ↳ app/controllers/drivers_controller.rb:31:in `create'
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/drivers_controller.rb:31:in `create'
+Redirected to http://localhost:3001/ridersList.html
+Completed 302 Found in 8ms (ActiveRecord: 2.6ms | Allocations: 2708)
+
+
+Started GET "/riders" for ::1 at 2020-07-09 16:32:45 -0600
+Processing by RidersController#index as */*
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT "riders".* FROM "riders"[0m
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 11]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 12]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 13]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.6ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 14]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 15]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 16]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 17]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 18]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 1.8ms | Allocations: 11192)
+
+
+Started GET "/riders" for ::1 at 2020-07-09 16:32:45 -0600
+Processing by RidersController#index as */*
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT "riders".* FROM "riders"[0m
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 11]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 12]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 13]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 14]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 15]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 16]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 17]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 18]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 1.3ms | Allocations: 11192)
+
+
+Started GET "/riders?pass=Epic" for ::1 at 2020-07-09 16:32:58 -0600
+Processing by RidersController#index as */*
+  Parameters: {"pass"=>"Epic"}
+  [1m[36mRider Load (0.3ms)[0m  [1m[34mSELECT "riders".* FROM "riders" WHERE "riders"."pass" = ?[0m  [["pass", "Epic"]]
+  ↳ app/controllers/riders_controller.rb:12:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1117)
+
+
+Started GET "/riders?pass=Epic" for ::1 at 2020-07-09 16:32:58 -0600
+Processing by RidersController#index as */*
+  Parameters: {"pass"=>"Epic"}
+  [1m[36mRider Load (0.3ms)[0m  [1m[34mSELECT "riders".* FROM "riders" WHERE "riders"."pass" = ?[0m  [["pass", "Epic"]]
+  ↳ app/controllers/riders_controller.rb:12:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 1092)
+
+
+Started GET "/drivers" for ::1 at 2020-07-09 16:33:03 -0600
+Started GET "/riders/12" for ::1 at 2020-07-09 16:33:03 -0600
+Processing by RidersController#show as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mRider Load (0.5ms)[0m  [1m[34mSELECT "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:24:in `show'
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" INNER JOIN "rides" ON "drivers"."id" = "rides"."driver_id" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 12]]
+  ↳ app/controllers/riders_controller.rb:25:in `show'
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 12]]
+  ↳ app/controllers/riders_controller.rb:25:in `show'
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 1.1ms | Allocations: 3787)
+
+
+Processing by DriversController#index as */*
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 11]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 12]]
+Started GET "/drivers/" for ::1 at 2020-07-09 16:33:03 -0600
+Processing by DriversController#index as */*
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+Started GET "/riders" for ::1 at 2020-07-09 16:33:03 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RidersController#index as */*
+  [1m[36mRider Load (0.3ms)[0m  [1m[34mSELECT "riders".* FROM "riders"[0m
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 11]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 12]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 13]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.7ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 14]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 15]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 16]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 13]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 17]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 18]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 2.1ms | Allocations: 12478)
+
+
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 11]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 12]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 14]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 13]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 15]]
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 14]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 16]]
+  [1m[36mRide Load (0.5ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 15]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 16]]
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 17]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 17]]
+Completed 200 OK in 110ms (Views: 108.7ms | ActiveRecord: 1.3ms | Allocations: 31502)
+
+
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+Completed 200 OK in 99ms (Views: 96.7ms | ActiveRecord: 1.7ms | Allocations: 29732)
+
+
+Started POST "/rides" for ::1 at 2020-07-09 16:33:19 -0600
+Processing by RidesController#create as HTML
+  Parameters: {"driver_id"=>"17", "rider_id"=>"12"}
+  [1m[36mDriver Load (0.6ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:14:in `create'
+  [1m[36mRider Load (0.3ms)[0m  [1m[34mSELECT "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rides_controller.rb:17:in `create'
+  [1m[36mRide Create (3.4ms)[0m  [1m[32mINSERT INTO "rides" ("driver_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["driver_id", 17], ["rider_id", 12], ["created_at", "2020-07-09 22:33:19.209141"], ["updated_at", "2020-07-09 22:33:19.209141"]]
+  ↳ app/controllers/rides_controller.rb:17:in `create'
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rides_controller.rb:17:in `create'
+Redirected to http://localhost:3001/riderShow.html?id=12
+Completed 302 Found in 14ms (ActiveRecord: 6.1ms | Allocations: 3495)
+
+
+Started GET "/drivers" for ::1 at 2020-07-09 16:33:19 -0600
+Processing by DriversController#index as */*
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 11]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+Started GET "/drivers/" for ::1 at 2020-07-09 16:33:19 -0600
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 12]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 13]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 14]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 15]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 16]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 17]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 1.3ms | Allocations: 11321)
+
+
+Started GET "/riders/12" for ::1 at 2020-07-09 16:33:19 -0600
+Started GET "/riders" for ::1 at 2020-07-09 16:33:19 -0600
+Processing by RidersController#index as */*
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT "riders".* FROM "riders"[0m
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+Processing by DriversController#index as */*
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 11]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 12]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+Processing by RidersController#show as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 11]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 13]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 14]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (1.5ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 15]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 16]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 17]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+Completed 200 OK in 42ms (Views: 38.6ms | ActiveRecord: 2.7ms | Allocations: 12124)
+
+
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:24:in `show'
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" INNER JOIN "rides" ON "drivers"."id" = "rides"."driver_id" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 12]]
+  ↳ app/controllers/riders_controller.rb:25:in `show'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 12]]
+  ↳ app/controllers/riders_controller.rb:25:in `show'
+Completed 200 OK in 23ms (Views: 4.2ms | ActiveRecord: 0.5ms | Allocations: 11921)
+
+
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 12]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (1.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 13]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 14]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.9ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 15]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 16]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.4ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 17]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 18]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+Completed 200 OK in 73ms (Views: 69.4ms | ActiveRecord: 3.4ms | Allocations: 25952)
+
+
+Started GET "/riders" for ::1 at 2020-07-10 09:51:15 -0600
+Started GET "/drivers" for ::1 at 2020-07-10 09:51:15 -0600
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RidersController#index as */*
+Processing by DriversController#index as */*
+  [1m[36mRider Load (0.3ms)[0m  [1m[34mSELECT "riders".* FROM "riders"[0m
+  [1m[36mDriver Load (0.5ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 11]]
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 11]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 12]]
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 12]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.6ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 13]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 14]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 13]]
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 15]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.5ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 14]]
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 16]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 15]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 17]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 16]]
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 18]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 17]]
+Completed 200 OK in 190ms (Views: 174.0ms | ActiveRecord: 4.5ms | Allocations: 44339)
+
+
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+Completed 200 OK in 183ms (Views: 177.2ms | ActiveRecord: 2.8ms | Allocations: 44672)
+
+
+Started POST "/drivers" for ::1 at 2020-07-10 09:52:15 -0600
+Processing by DriversController#create as HTML
+  Parameters: {"name"=>"Iron Man", "phone"=>"7778889999", "email"=>"IronMan@gmail.com", "resort"=>"Copper Mountain", "pass"=>"Epic", "Venmo"=>"IronMan2020", "time"=>"2020-07-10T09:52"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/drivers_controller.rb:31:in `create'
+  [1m[36mDriver Create (0.8ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "phone", "email", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Iron Man"], ["phone", "7778889999"], ["email", "IronMan@gmail.com"], ["resort", "Copper Mountain"], ["pass", "Epic"], ["Venmo", "IronMan2020"], ["created_at", "2020-07-10 15:52:16.013872"], ["updated_at", "2020-07-10 15:52:16.013872"]]
+  ↳ app/controllers/drivers_controller.rb:31:in `create'
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/drivers_controller.rb:31:in `create'
+Redirected to http://localhost:3001/ridersList.html
+Completed 302 Found in 11ms (ActiveRecord: 4.5ms | Allocations: 2726)
+
+
+Started GET "/riders" for ::1 at 2020-07-10 09:52:16 -0600
+Processing by RidersController#index as */*
+  [1m[36mRider Load (0.3ms)[0m  [1m[34mSELECT "riders".* FROM "riders"[0m
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 11]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 12]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 13]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 14]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 15]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 16]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.4ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 17]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 18]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 1.7ms | Allocations: 11380)
+
+
+Started GET "/riders" for ::1 at 2020-07-10 09:52:16 -0600
+Processing by RidersController#index as */*
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT "riders".* FROM "riders"[0m
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 11]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 12]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 13]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 14]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.5ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 15]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 16]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 17]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 18]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 1.7ms | Allocations: 11335)
+
+
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRide Destroy (0.5ms)[0m  [1m[31mDELETE FROM "rides" WHERE "rides"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRide Destroy (3.6ms)[0m  [1m[31mDELETE FROM "rides" WHERE "rides"."id" = ?[0m  [["id", 3]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRide Destroy (0.4ms)[0m  [1m[31mDELETE FROM "rides" WHERE "rides"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rides" WHERE "rides"."id" = ?[0m  [["id", 5]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rides" WHERE "rides"."id" = ?[0m  [["id", 6]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rides" WHERE "rides"."id" = ?[0m  [["id", 7]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRide Destroy (0.4ms)[0m  [1m[31mDELETE FROM "rides" WHERE "rides"."id" = ?[0m  [["id", 8]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Destroy (0.3ms)[0m  [1m[31mDELETE FROM "drivers" WHERE "drivers"."id" = ?[0m  [["id", 11]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Destroy (0.4ms)[0m  [1m[31mDELETE FROM "drivers" WHERE "drivers"."id" = ?[0m  [["id", 12]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Destroy (0.3ms)[0m  [1m[31mDELETE FROM "drivers" WHERE "drivers"."id" = ?[0m  [["id", 13]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Destroy (0.4ms)[0m  [1m[31mDELETE FROM "drivers" WHERE "drivers"."id" = ?[0m  [["id", 14]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Destroy (0.3ms)[0m  [1m[31mDELETE FROM "drivers" WHERE "drivers"."id" = ?[0m  [["id", 15]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Destroy (0.3ms)[0m  [1m[31mDELETE FROM "drivers" WHERE "drivers"."id" = ?[0m  [["id", 16]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Destroy (0.5ms)[0m  [1m[31mDELETE FROM "drivers" WHERE "drivers"."id" = ?[0m  [["id", 17]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Destroy (0.4ms)[0m  [1m[31mDELETE FROM "drivers" WHERE "drivers"."id" = ?[0m  [["id", 18]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT "riders".* FROM "riders"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRider Destroy (0.3ms)[0m  [1m[31mDELETE FROM "riders" WHERE "riders"."id" = ?[0m  [["id", 11]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRider Destroy (0.3ms)[0m  [1m[31mDELETE FROM "riders" WHERE "riders"."id" = ?[0m  [["id", 12]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRider Destroy (0.3ms)[0m  [1m[31mDELETE FROM "riders" WHERE "riders"."id" = ?[0m  [["id", 13]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRider Destroy (0.3ms)[0m  [1m[31mDELETE FROM "riders" WHERE "riders"."id" = ?[0m  [["id", 14]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRider Destroy (0.3ms)[0m  [1m[31mDELETE FROM "riders" WHERE "riders"."id" = ?[0m  [["id", 15]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRider Destroy (0.3ms)[0m  [1m[31mDELETE FROM "riders" WHERE "riders"."id" = ?[0m  [["id", 16]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRider Destroy (0.5ms)[0m  [1m[31mDELETE FROM "riders" WHERE "riders"."id" = ?[0m  [["id", 17]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRider Destroy (0.3ms)[0m  [1m[31mDELETE FROM "riders" WHERE "riders"."id" = ?[0m  [["id", 18]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Create (0.4ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jordan Buysse"], ["phone", "3031112222"], ["email", "jordan303@gmail.com"], ["datetime", "2020-06-16 03:30:00"], ["resort", "Loveland"], ["pass", "Ikon"], ["Venmo", "Jordan13"], ["created_at", "2020-07-10 15:53:28.078515"], ["updated_at", "2020-07-10 15:53:28.078515"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Create (0.3ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ahmed Gaber"], ["phone", "3031112223"], ["email", "ahmed@gmail.com"], ["datetime", "2020-06-17 07:05:00"], ["resort", "Breckenridge"], ["pass", "Epic"], ["Venmo", "Ahmed1"], ["created_at", "2020-07-10 15:53:28.083536"], ["updated_at", "2020-07-10 15:53:28.083536"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Create (0.3ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jesse Pope"], ["phone", "3031012203"], ["email", "jesse@gmail.com"], ["datetime", "2020-06-18 06:00:00"], ["resort", "Steamboat"], ["pass", "Ikon"], ["Venmo", "Jesse2020"], ["created_at", "2020-07-10 15:53:28.087702"], ["updated_at", "2020-07-10 15:53:28.087702"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Create (0.4ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bryce Kennedy"], ["phone", "3039998888"], ["email", "Bryce@gmail.com"], ["datetime", "2020-06-18 05:03:00"], ["resort", "Copper Mountain"], ["pass", "Ikon"], ["Venmo", "BryceTheBaker99"], ["created_at", "2020-07-10 15:53:28.092306"], ["updated_at", "2020-07-10 15:53:28.092306"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Create (0.3ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Warren Miller"], ["phone", "3039998888"], ["email", "warrenmiller@gmail.com"], ["datetime", "2020-06-18 05:03:00"], ["resort", "Crested Butte"], ["pass", "Epic"], ["Venmo", "BryceTheBaker99"], ["created_at", "2020-07-10 15:53:28.096685"], ["updated_at", "2020-07-10 15:53:28.096685"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRider Create (0.4ms)[0m  [1m[32mINSERT INTO "riders" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Scott"], ["phone", "3031112222"], ["email", "ssinger303@gmail.com"], ["datetime", "2020-06-18 08:45:00"], ["resort", "Loveland"], ["pass", "Ikon"], ["Venmo", "Scott12"], ["created_at", "2020-07-10 15:53:28.100994"], ["updated_at", "2020-07-10 15:53:28.100994"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRider Create (0.4ms)[0m  [1m[32mINSERT INTO "riders" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kyle"], ["phone", "3031112224"], ["email", "kyle@gmail.com"], ["datetime", "2020-06-19 10:45:00"], ["resort", "Breckenridge"], ["pass", "Epic"], ["Venmo", "Kyle1"], ["created_at", "2020-07-10 15:53:28.105403"], ["updated_at", "2020-07-10 15:53:28.105403"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRider Create (0.4ms)[0m  [1m[32mINSERT INTO "riders" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Austin"], ["phone", "303123456"], ["email", "austin@gmail.com"], ["datetime", "2020-06-20 10:45:00"], ["resort", "Steamboat"], ["pass", "Ikon"], ["Venmo", "AustingTheDJ303"], ["created_at", "2020-07-10 15:53:28.123787"], ["updated_at", "2020-07-10 15:53:28.123787"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRider Create (0.4ms)[0m  [1m[32mINSERT INTO "riders" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Haley"], ["phone", "3031234567"], ["email", "haley@gmail.com"], ["datetime", "2020-06-20 10:45:00"], ["resort", "Copper Mountain"], ["pass", "Ikon"], ["Venmo", "Haley2020"], ["created_at", "2020-07-10 15:53:28.128755"], ["updated_at", "2020-07-10 15:53:28.128755"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRider Create (0.4ms)[0m  [1m[32mINSERT INTO "riders" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ashley"], ["phone", "3031234568"], ["email", "ashley@gmail.com"], ["datetime", "2020-06-20 04:45:00"], ["resort", "Crested Butte"], ["pass", "Ikon"], ["Venmo", "Haley2020"], ["created_at", "2020-07-10 15:53:28.133514"], ["updated_at", "2020-07-10 15:53:28.133514"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRide Create (0.6ms)[0m  [1m[32mINSERT INTO "rides" ("driver_id", "rider_id", "datetime", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["driver_id", 19], ["rider_id", 19], ["datetime", "2020-06-20 04:45:00"], ["description", "Saturday morning ride from Dino Lots at 6:00AM"], ["created_at", "2020-07-10 15:53:28.155232"], ["updated_at", "2020-07-10 15:53:28.155232"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRide Create (0.5ms)[0m  [1m[32mINSERT INTO "rides" ("driver_id", "rider_id", "datetime", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["driver_id", 19], ["rider_id", 20], ["datetime", "2020-07-20 04:45:00"], ["description", "Saturday morning ride from Dino Lots at 7:00AM"], ["created_at", "2020-07-10 15:53:28.161379"], ["updated_at", "2020-07-10 15:53:28.161379"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRide Create (0.4ms)[0m  [1m[32mINSERT INTO "rides" ("driver_id", "rider_id", "datetime", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["driver_id", 19], ["rider_id", 21], ["datetime", "2020-08-20 04:45:00"], ["description", "Saturday morning ride from Dino Lots at 8:00AM"], ["created_at", "2020-07-10 15:53:28.165716"], ["updated_at", "2020-07-10 15:53:28.165716"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/riders" for ::1 at 2020-07-10 09:54:02 -0600
+Started GET "/drivers" for ::1 at 2020-07-10 09:54:02 -0600
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RidersController#index as */*
+  [1m[36mRider Load (0.5ms)[0m  [1m[34mSELECT "riders".* FROM "riders"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+Processing by DriversController#index as */*
+  [1m[36mRide Load (0.8ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 19]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mDriver Load (0.5ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 20]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.7ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 19]]
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 21]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 22]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 23]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+Completed 200 OK in 169ms (Views: 159.1ms | ActiveRecord: 3.8ms | Allocations: 36405)
+
+
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 20]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 21]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 22]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 23]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+Completed 200 OK in 80ms (Views: 73.1ms | ActiveRecord: 2.4ms | Allocations: 26606)
+
+
+Started POST "/drivers" for ::1 at 2020-07-10 09:54:44 -0600
+Processing by DriversController#create as HTML
+  Parameters: {"name"=>"Thanos", "phone"=>"9998889999", "email"=>"ThanosDestroyer@gmail.com", "resort"=>"Copper Mountain", "pass"=>"Epic", "Venmo"=>"ThanosDestroyerOfWorlds", "time"=>"2020-07-10T09:54"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/drivers_controller.rb:31:in `create'
+  [1m[36mDriver Create (0.9ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "phone", "email", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Thanos"], ["phone", "9998889999"], ["email", "ThanosDestroyer@gmail.com"], ["resort", "Copper Mountain"], ["pass", "Epic"], ["Venmo", "ThanosDestroyerOfWorlds"], ["created_at", "2020-07-10 15:54:44.261388"], ["updated_at", "2020-07-10 15:54:44.261388"]]
+  ↳ app/controllers/drivers_controller.rb:31:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/drivers_controller.rb:31:in `create'
+Redirected to http://localhost:3001/ridersList.html
+Completed 302 Found in 9ms (ActiveRecord: 2.0ms | Allocations: 2727)
+
+
+Started GET "/riders" for ::1 at 2020-07-10 09:54:44 -0600
+Processing by RidersController#index as */*
+  [1m[36mRider Load (0.3ms)[0m  [1m[34mSELECT "riders".* FROM "riders"[0m
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 19]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 20]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 21]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 22]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 23]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 1.2ms | Allocations: 7318)
+
+
+Started GET "/riders" for ::1 at 2020-07-10 09:54:44 -0600
+Processing by RidersController#index as */*
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT "riders".* FROM "riders"[0m
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 19]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 20]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 21]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 22]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 23]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.9ms | Allocations: 10623)
+
+
+Started GET "/riders?resort=Copper%20Mountain" for ::1 at 2020-07-10 09:55:01 -0600
+Processing by RidersController#index as */*
+  Parameters: {"resort"=>"Copper Mountain"}
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT "riders".* FROM "riders" WHERE "riders"."resort" = ?[0m  [["resort", "Copper Mountain"]]
+  ↳ app/controllers/riders_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.2ms | Allocations: 1117)
+
+
+Started GET "/riders?resort=Copper%20Mountain" for ::1 at 2020-07-10 09:55:01 -0600
+Processing by RidersController#index as */*
+  Parameters: {"resort"=>"Copper Mountain"}
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT "riders".* FROM "riders" WHERE "riders"."resort" = ?[0m  [["resort", "Copper Mountain"]]
+  ↳ app/controllers/riders_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1090)
+
+
+Started GET "/drivers" for ::1 at 2020-07-10 09:55:04 -0600
+Processing by DriversController#index as */*
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 19]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 20]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 21]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 22]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 23]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 24]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+Started GET "/riders/22" for ::1 at 2020-07-10 09:55:04 -0600
+Processing by RidersController#show as */*
+  Parameters: {"id"=>"22"}
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:24:in `show'
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" INNER JOIN "rides" ON "drivers"."id" = "rides"."driver_id" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 22]]
+Completed 200 OK in 24ms (Views: 18.9ms | ActiveRecord: 1.0ms | Allocations: 8820)
+
+
+Started GET "/riders" for ::1 at 2020-07-10 09:55:04 -0600
+Processing by RidersController#index as */*
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT "riders".* FROM "riders"[0m
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 19]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 20]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 21]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 22]]
+Started GET "/drivers/" for ::1 at 2020-07-10 09:55:04 -0600
+  ↳ app/controllers/riders_controller.rb:25:in `show'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 22]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 23]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 1.0ms | Allocations: 8206)
+
+
+Processing by DriversController#index as */*
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/controllers/riders_controller.rb:25:in `show'
+Completed 200 OK in 56ms (Views: 54.2ms | ActiveRecord: 0.7ms | Allocations: 13428)
+
+
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 19]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 20]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.5ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 21]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 22]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 23]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 24]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 1.4ms | Allocations: 8882)
+
+
+Started POST "/rides" for ::1 at 2020-07-10 09:55:13 -0600
+Processing by RidesController#create as HTML
+  Parameters: {"driver_id"=>"24", "rider_id"=>"22"}
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:14:in `create'
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rides_controller.rb:17:in `create'
+  [1m[36mRide Create (1.9ms)[0m  [1m[32mINSERT INTO "rides" ("driver_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["driver_id", 24], ["rider_id", 22], ["created_at", "2020-07-10 15:55:13.544259"], ["updated_at", "2020-07-10 15:55:13.544259"]]
+  ↳ app/controllers/rides_controller.rb:17:in `create'
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rides_controller.rb:17:in `create'
+Redirected to http://localhost:3001/riderShow.html?id=22
+Completed 302 Found in 35ms (ActiveRecord: 8.2ms | Allocations: 3600)
+
+
+Started GET "/drivers/" for ::1 at 2020-07-10 09:55:13 -0600
+Started GET "/riders/22" for ::1 at 2020-07-10 09:55:13 -0600
+Processing by RidersController#show as */*
+  Parameters: {"id"=>"22"}
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:24:in `show'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" INNER JOIN "rides" ON "drivers"."id" = "rides"."driver_id" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 22]]
+  ↳ app/controllers/riders_controller.rb:25:in `show'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 22]]
+Started GET "/riders" for ::1 at 2020-07-10 09:55:13 -0600
+Started GET "/drivers" for ::1 at 2020-07-10 09:55:13 -0600
+  ↳ app/controllers/riders_controller.rb:25:in `show'
+Processing by DriversController#index as */*
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.5ms | Allocations: 4026)
+
+
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 19]]
+Processing by DriversController#index as */*
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 20]]
+Processing by RidersController#index as */*
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT "riders".* FROM "riders"[0m
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 19]]
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 21]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 19]]
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 22]]
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 20]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 20]]
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 23]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 21]]
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 21]]
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 24]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 22]]
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 22]]
+Completed 200 OK in 47ms (Views: 45.9ms | ActiveRecord: 0.9ms | Allocations: 20523)
+
+
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 23]]
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 23]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 24]]
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.8ms | Allocations: 18973)
+
+
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 1.1ms | Allocations: 24257)
+
+
+Started GET "/riders" for ::1 at 2020-07-10 09:55:26 -0600
+Processing by RidersController#index as */*
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT "riders".* FROM "riders"[0m
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 19]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 20]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 21]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 22]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 23]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 1.2ms | Allocations: 7417)
+
+
+Started GET "/riders" for ::1 at 2020-07-10 09:55:26 -0600
+Processing by RidersController#index as */*
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT "riders".* FROM "riders"[0m
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 19]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 20]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 21]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 22]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 23]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+Completed 200 OK in 40ms (Views: 39.3ms | ActiveRecord: 0.8ms | Allocations: 7417)
+
+
+Started GET "/riders?resort=Copper%20Mountain" for ::1 at 2020-07-10 09:55:36 -0600
+Processing by RidersController#index as */*
+  Parameters: {"resort"=>"Copper Mountain"}
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT "riders".* FROM "riders" WHERE "riders"."resort" = ?[0m  [["resort", "Copper Mountain"]]
+  ↳ app/controllers/riders_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1115)
+
+
+Started GET "/riders?resort=Copper%20Mountain" for ::1 at 2020-07-10 09:55:36 -0600
+Processing by RidersController#index as */*
+  Parameters: {"resort"=>"Copper Mountain"}
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT "riders".* FROM "riders" WHERE "riders"."resort" = ?[0m  [["resort", "Copper Mountain"]]
+  ↳ app/controllers/riders_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1090)
+
+
+Started GET "/drivers" for ::1 at 2020-07-10 09:55:47 -0600
+Processing by DriversController#index as */*
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 19]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 20]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (2.8ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 21]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.4ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 22]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 23]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 24]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+Completed 200 OK in 35ms (Views: 30.5ms | ActiveRecord: 4.1ms | Allocations: 8629)
+
+
+Started GET "/drivers" for ::1 at 2020-07-10 09:55:47 -0600
+Processing by DriversController#index as */*
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 19]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 20]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 21]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 22]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 23]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 24]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+Completed 200 OK in 58ms (Views: 57.1ms | ActiveRecord: 1.1ms | Allocations: 8582)
+
+
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRide Destroy (0.4ms)[0m  [1m[31mDELETE FROM "rides" WHERE "rides"."id" = ?[0m  [["id", 9]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rides" WHERE "rides"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rides" WHERE "rides"."id" = ?[0m  [["id", 11]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rides" WHERE "rides"."id" = ?[0m  [["id", 12]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Destroy (0.3ms)[0m  [1m[31mDELETE FROM "drivers" WHERE "drivers"."id" = ?[0m  [["id", 19]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Destroy (0.3ms)[0m  [1m[31mDELETE FROM "drivers" WHERE "drivers"."id" = ?[0m  [["id", 20]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Destroy (0.3ms)[0m  [1m[31mDELETE FROM "drivers" WHERE "drivers"."id" = ?[0m  [["id", 21]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Destroy (0.3ms)[0m  [1m[31mDELETE FROM "drivers" WHERE "drivers"."id" = ?[0m  [["id", 22]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Destroy (0.3ms)[0m  [1m[31mDELETE FROM "drivers" WHERE "drivers"."id" = ?[0m  [["id", 23]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Destroy (0.3ms)[0m  [1m[31mDELETE FROM "drivers" WHERE "drivers"."id" = ?[0m  [["id", 24]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT "riders".* FROM "riders"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRider Destroy (0.3ms)[0m  [1m[31mDELETE FROM "riders" WHERE "riders"."id" = ?[0m  [["id", 19]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRider Destroy (0.3ms)[0m  [1m[31mDELETE FROM "riders" WHERE "riders"."id" = ?[0m  [["id", 20]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRider Destroy (0.3ms)[0m  [1m[31mDELETE FROM "riders" WHERE "riders"."id" = ?[0m  [["id", 21]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRider Destroy (0.3ms)[0m  [1m[31mDELETE FROM "riders" WHERE "riders"."id" = ?[0m  [["id", 22]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRider Destroy (0.3ms)[0m  [1m[31mDELETE FROM "riders" WHERE "riders"."id" = ?[0m  [["id", 23]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Create (0.3ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jordan Buysse"], ["phone", "3031112222"], ["email", "jordan303@gmail.com"], ["datetime", "2020-06-16 03:30:00"], ["resort", "Loveland"], ["pass", "Ikon"], ["Venmo", "Jordan13"], ["created_at", "2020-07-25 18:26:50.318330"], ["updated_at", "2020-07-25 18:26:50.318330"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Create (0.3ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ahmed Gaber"], ["phone", "3031112223"], ["email", "ahmed@gmail.com"], ["datetime", "2020-06-17 07:05:00"], ["resort", "Breckenridge"], ["pass", "Epic"], ["Venmo", "Ahmed1"], ["created_at", "2020-07-25 18:26:50.322991"], ["updated_at", "2020-07-25 18:26:50.322991"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Create (0.3ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jesse Pope"], ["phone", "3031012203"], ["email", "jesse@gmail.com"], ["datetime", "2020-06-18 06:00:00"], ["resort", "Steamboat"], ["pass", "Ikon"], ["Venmo", "Jesse2020"], ["created_at", "2020-07-25 18:26:50.327347"], ["updated_at", "2020-07-25 18:26:50.327347"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Create (0.3ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bryce Kennedy"], ["phone", "3039998888"], ["email", "Bryce@gmail.com"], ["datetime", "2020-06-18 05:03:00"], ["resort", "Copper Mountain"], ["pass", "Ikon"], ["Venmo", "BryceTheBaker99"], ["created_at", "2020-07-25 18:26:50.331664"], ["updated_at", "2020-07-25 18:26:50.331664"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Create (0.3ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Warren Miller"], ["phone", "3039998888"], ["email", "warrenmiller@gmail.com"], ["datetime", "2020-06-18 05:03:00"], ["resort", "Crested Butte"], ["pass", "Epic"], ["Venmo", "BryceTheBaker99"], ["created_at", "2020-07-25 18:26:50.346169"], ["updated_at", "2020-07-25 18:26:50.346169"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRider Create (0.3ms)[0m  [1m[32mINSERT INTO "riders" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Scott"], ["phone", "3031112222"], ["email", "ssinger303@gmail.com"], ["datetime", "2020-06-18 08:45:00"], ["resort", "Loveland"], ["pass", "Ikon"], ["Venmo", "Scott12"], ["created_at", "2020-07-25 18:26:50.350187"], ["updated_at", "2020-07-25 18:26:50.350187"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRider Create (0.4ms)[0m  [1m[32mINSERT INTO "riders" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kyle"], ["phone", "3031112224"], ["email", "kyle@gmail.com"], ["datetime", "2020-06-19 10:45:00"], ["resort", "Breckenridge"], ["pass", "Epic"], ["Venmo", "Kyle1"], ["created_at", "2020-07-25 18:26:50.353932"], ["updated_at", "2020-07-25 18:26:50.353932"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRider Create (0.3ms)[0m  [1m[32mINSERT INTO "riders" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Austin"], ["phone", "303123456"], ["email", "austin@gmail.com"], ["datetime", "2020-06-20 10:45:00"], ["resort", "Steamboat"], ["pass", "Ikon"], ["Venmo", "AustingTheDJ303"], ["created_at", "2020-07-25 18:26:50.358593"], ["updated_at", "2020-07-25 18:26:50.358593"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRider Create (0.3ms)[0m  [1m[32mINSERT INTO "riders" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Haley"], ["phone", "3031234567"], ["email", "haley@gmail.com"], ["datetime", "2020-06-20 10:45:00"], ["resort", "Copper Mountain"], ["pass", "Ikon"], ["Venmo", "Haley2020"], ["created_at", "2020-07-25 18:26:50.362783"], ["updated_at", "2020-07-25 18:26:50.362783"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRider Create (0.3ms)[0m  [1m[32mINSERT INTO "riders" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ashley"], ["phone", "3031234568"], ["email", "ashley@gmail.com"], ["datetime", "2020-06-20 04:45:00"], ["resort", "Crested Butte"], ["pass", "Ikon"], ["Venmo", "Haley2020"], ["created_at", "2020-07-25 18:26:50.366788"], ["updated_at", "2020-07-25 18:26:50.366788"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRide Create (0.5ms)[0m  [1m[32mINSERT INTO "rides" ("driver_id", "rider_id", "datetime", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["driver_id", 25], ["rider_id", 24], ["datetime", "2020-06-20 04:45:00"], ["description", "Saturday morning ride from Dino Lots at 6:00AM"], ["created_at", "2020-07-25 18:26:50.389385"], ["updated_at", "2020-07-25 18:26:50.389385"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRide Create (0.5ms)[0m  [1m[32mINSERT INTO "rides" ("driver_id", "rider_id", "datetime", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["driver_id", 25], ["rider_id", 25], ["datetime", "2020-07-20 04:45:00"], ["description", "Saturday morning ride from Dino Lots at 7:00AM"], ["created_at", "2020-07-25 18:26:50.394917"], ["updated_at", "2020-07-25 18:26:50.394917"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRide Create (0.4ms)[0m  [1m[32mINSERT INTO "rides" ("driver_id", "rider_id", "datetime", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["driver_id", 25], ["rider_id", 26], ["datetime", "2020-08-20 04:45:00"], ["description", "Saturday morning ride from Dino Lots at 8:00AM"], ["created_at", "2020-07-25 18:26:50.399817"], ["updated_at", "2020-07-25 18:26:50.399817"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2020-07-25 12:27:03 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/scottsinger/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/scottsinger/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 21.2ms | Allocations: 315)
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.0ms | Allocations: 1596)
+
+
+Started GET "/riders" for ::1 at 2020-07-25 12:27:28 -0600
+Started GET "/drivers" for ::1 at 2020-07-25 12:27:28 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DriversController#index as */*
+Processing by RidersController#index as */*
+  [1m[36mDriver Load (0.4ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  [1m[36mRider Load (0.3ms)[0m  [1m[34mSELECT "riders".* FROM "riders"[0m
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 25]]
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 24]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 26]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 25]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 26]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 27]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 28]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+Completed 200 OK in 153ms (Views: 148.3ms | ActiveRecord: 1.5ms | Allocations: 33487)
+
+
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 27]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 28]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 29]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+Completed 200 OK in 176ms (Views: 160.3ms | ActiveRecord: 2.6ms | Allocations: 41632)
+
+
+Started GET "/drivers" for ::1 at 2020-07-25 12:28:07 -0600
+Processing by DriversController#index as */*
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (3.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 25]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 26]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 27]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 28]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 29]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+Completed 200 OK in 14ms (Views: 9.4ms | ActiveRecord: 3.8ms | Allocations: 7292)
+
+
+Started GET "/riders" for ::1 at 2020-07-25 12:28:07 -0600
+Processing by RidersController#index as */*
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT "riders".* FROM "riders"[0m
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (2.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 24]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 25]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 26]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 27]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 28]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 2.8ms | Allocations: 7336)
+
+
+Started GET "/drivers" for ::1 at 2020-07-25 12:28:48 -0600
+Processing by DriversController#index as */*
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 25]]
+Started GET "/riders" for ::1 at 2020-07-25 12:28:48 -0600
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 26]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 27]]
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 28]]
+Processing by RidersController#index as */*
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT "riders".* FROM "riders"[0m
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."driver_id" = ?[0m  [["driver_id", 29]]
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 24]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  ↳ app/controllers/drivers_controller.rb:21:in `index'
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 25]]
+Completed 200 OK in 28ms (Views: 27.4ms | ActiveRecord: 0.7ms | Allocations: 10109)
+
+
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.6ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 26]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 27]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+  [1m[36mRide Load (0.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."rider_id" = ?[0m  [["rider_id", 28]]
+  ↳ app/controllers/riders_controller.rb:19:in `index'
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 1.4ms | Allocations: 9440)
+
+

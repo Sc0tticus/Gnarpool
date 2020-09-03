@@ -1,8 +1,8 @@
-fetch('http://localhost:3000/drivers')
+fetch('https://gnarpool-back-end.herokuapp.com/drivers')
   .then(response => response.json())
   .then(showDrivers)
 
-fetch('http://localhost:3000/riders')
+fetch('https://gnarpool-back-end.herokuapp.com/riders')
   .then(response => response.json())
   .then(showRiders)
 

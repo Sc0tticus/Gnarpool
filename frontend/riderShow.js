@@ -8,7 +8,7 @@ const driversDropdown = document.querySelector('#driver-dropdown');
 
 const ridersDropdown = document.querySelector('#rider-dropdown');
 
-const baseURL = 'http://localhost:3000';
+const baseURL = 'https://gnarpool-back-end.herokuapp.com';
 
 let driversURL = `${baseURL}/drivers`;
 let ridersURL = `${baseURL}/riders`;
@@ -41,7 +41,7 @@ fetch(ridersURL)
 
 const driversRidesList = document.getElementById('drivers-list-of-rides')
 
-fetch(`http://localhost:3000/riders/${id}`)
+fetch(`https://gnarpool-back-end.herokuapp.com/riders/${id}`)
   .then(response => response.json())
   .then(rider => handleInfo(rider))
 
@@ -81,7 +81,7 @@ function addRiderInfo(id,stat) {
   riderShowMain.append(ele)
 }
  
-fetch(`http://localhost:3000/drivers/`)
+fetch(`https://gnarpool-back-end.herokuapp.com/drivers/`)
   .then(response => response.json())
   .then(driver => renderDriversOptions(driver))
 

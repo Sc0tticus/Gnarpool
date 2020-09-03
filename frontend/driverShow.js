@@ -8,7 +8,7 @@ const driversDropdown = document.querySelector('#driver-dropdown');
 const ridersDropdown = document.querySelector('#rider-dropdown');
 
 
-const baseURL = 'http://localhost:3000';
+const baseURL = 'https://gnarpool-back-end.herokuapp.com';
 
 let driversURL = `${baseURL}/drivers`;
 let ridersURL = `${baseURL}/riders`;
@@ -39,7 +39,7 @@ fetch(ridersURL)
     })
   }
 
-fetch(`http://localhost:3000/drivers/${id}`)
+fetch(`https://gnarpool-back-end.herokuapp.com/drivers/${id}`)
   .then(response => response.json())
   .then(driver => handleInfo(driver))
 

@@ -8,7 +8,7 @@ const dropdown1 = document.querySelector('#dropdown1');
 const dropdown2 = document.querySelector('#dropdown2');
 const dropdown3 = document.querySelector('#dropdown3');
 
-const baseURL = 'http://localhost:3000';
+const baseURL = 'https://gnarpool-back-end.herokuapp.com';
 
 let driversURL = `${baseURL}/drivers`;
 

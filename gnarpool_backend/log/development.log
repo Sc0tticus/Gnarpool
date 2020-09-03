@@ -4266,3 +4266,82 @@ Processing by DriversController#index as HTML
 Completed 200 OK in 80ms (Views: 66.8ms | ActiveRecord: 3.5ms | Allocations: 24138)
 
 
+  [1m[35m (341.9ms)[0m  [1m[35mCREATE DATABASE "gnarpool_practice_api_development" ENCODING = 'utf8'[0m
+  [1m[35m (125.0ms)[0m  [1m[35mCREATE DATABASE "gnarpool_test_api_test" ENCODING = 'utf8'[0m
+  [1m[35m (30.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5312200150202291430)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDrivers (20200622192232)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE TABLE "drivers" ("id" bigserial primary key, "name" character varying, "phone" character varying, "email" character varying, "datetime" timestamp, "resort" character varying, "pass" character varying, "Venmo" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200622192232"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateRiders (20200622192251)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "riders" ("id" bigserial primary key, "name" character varying, "phone" character varying, "email" character varying, "datetime" timestamp, "resort" character varying, "pass" character varying, "Venmo" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200622192251"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateRides (20200622194224)
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.8ms)[0m  [1m[35mCREATE TABLE "rides" ("id" bigserial primary key, "driver_id" bigint NOT NULL, "rider_id" bigint NOT NULL, "datetime" timestamp, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_efe84989e9"
+FOREIGN KEY ("driver_id")
+  REFERENCES "drivers" ("id")
+, CONSTRAINT "fk_rails_49bf3e6bec"
+FOREIGN KEY ("rider_id")
+  REFERENCES "riders" ("id")
+)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_rides_on_driver_id" ON "rides"  ("driver_id")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_rides_on_rider_id" ON "rides"  ("rider_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200622194224"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-03 16:44:42.698062"], ["updated_at", "2020-09-03 16:44:42.698062"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5312200150202291430)[0m
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mRide Load (0.7ms)[0m  [1m[34mSELECT "rides".* FROM "rides"[0m
+  [1m[36mDriver Load (0.7ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers"[0m
+  [1m[36mRider Load (0.4ms)[0m  [1m[34mSELECT "riders".* FROM "riders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDriver Create (0.5ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Jordan Buysse"], ["phone", "3031112222"], ["email", "jordan303@gmail.com"], ["datetime", "2020-06-16 03:30:00"], ["resort", "Loveland"], ["pass", "Ikon"], ["Venmo", "Jordan13"], ["created_at", "2020-09-03 16:44:48.177214"], ["updated_at", "2020-09-03 16:44:48.177214"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDriver Create (0.2ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Ahmed Gaber"], ["phone", "3031112223"], ["email", "ahmed@gmail.com"], ["datetime", "2020-06-17 07:05:00"], ["resort", "Breckenridge"], ["pass", "Epic"], ["Venmo", "Ahmed1"], ["created_at", "2020-09-03 16:44:48.180915"], ["updated_at", "2020-09-03 16:44:48.180915"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDriver Create (0.2ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Jesse Pope"], ["phone", "3031012203"], ["email", "jesse@gmail.com"], ["datetime", "2020-06-18 06:00:00"], ["resort", "Steamboat"], ["pass", "Ikon"], ["Venmo", "Jesse2020"], ["created_at", "2020-09-03 16:44:48.184289"], ["updated_at", "2020-09-03 16:44:48.184289"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDriver Create (0.2ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Bryce Kennedy"], ["phone", "3039998888"], ["email", "Bryce@gmail.com"], ["datetime", "2020-06-18 05:03:00"], ["resort", "Copper Mountain"], ["pass", "Ikon"], ["Venmo", "BryceTheBaker99"], ["created_at", "2020-09-03 16:44:48.187549"], ["updated_at", "2020-09-03 16:44:48.187549"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDriver Create (0.2ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Warren Miller"], ["phone", "3039998888"], ["email", "warrenmiller@gmail.com"], ["datetime", "2020-06-18 05:03:00"], ["resort", "Crested Butte"], ["pass", "Epic"], ["Venmo", "BryceTheBaker99"], ["created_at", "2020-09-03 16:44:48.190665"], ["updated_at", "2020-09-03 16:44:48.190665"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRider Create (0.4ms)[0m  [1m[32mINSERT INTO "riders" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Scott"], ["phone", "3031112222"], ["email", "ssinger303@gmail.com"], ["datetime", "2020-06-18 08:45:00"], ["resort", "Loveland"], ["pass", "Ikon"], ["Venmo", "Scott12"], ["created_at", "2020-09-03 16:44:48.202393"], ["updated_at", "2020-09-03 16:44:48.202393"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRider Create (0.2ms)[0m  [1m[32mINSERT INTO "riders" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Kyle"], ["phone", "3031112224"], ["email", "kyle@gmail.com"], ["datetime", "2020-06-19 10:45:00"], ["resort", "Breckenridge"], ["pass", "Epic"], ["Venmo", "Kyle1"], ["created_at", "2020-09-03 16:44:48.206071"], ["updated_at", "2020-09-03 16:44:48.206071"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRider Create (0.2ms)[0m  [1m[32mINSERT INTO "riders" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Austin"], ["phone", "303123456"], ["email", "austin@gmail.com"], ["datetime", "2020-06-20 10:45:00"], ["resort", "Steamboat"], ["pass", "Ikon"], ["Venmo", "AustingTheDJ303"], ["created_at", "2020-09-03 16:44:48.209669"], ["updated_at", "2020-09-03 16:44:48.209669"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRider Create (0.2ms)[0m  [1m[32mINSERT INTO "riders" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Haley"], ["phone", "3031234567"], ["email", "haley@gmail.com"], ["datetime", "2020-06-20 10:45:00"], ["resort", "Copper Mountain"], ["pass", "Ikon"], ["Venmo", "Haley2020"], ["created_at", "2020-09-03 16:44:48.212694"], ["updated_at", "2020-09-03 16:44:48.212694"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRider Create (0.3ms)[0m  [1m[32mINSERT INTO "riders" ("name", "phone", "email", "datetime", "resort", "pass", "Venmo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Ashley"], ["phone", "3031234568"], ["email", "ashley@gmail.com"], ["datetime", "2020-06-20 04:45:00"], ["resort", "Crested Butte"], ["pass", "Ikon"], ["Venmo", "Haley2020"], ["created_at", "2020-09-03 16:44:48.215680"], ["updated_at", "2020-09-03 16:44:48.215680"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRide Create (1.2ms)[0m  [1m[32mINSERT INTO "rides" ("driver_id", "rider_id", "datetime", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["driver_id", 1], ["rider_id", 1], ["datetime", "2020-06-20 04:45:00"], ["description", "Saturday morning ride from Dino Lots at 6:00AM"], ["created_at", "2020-09-03 16:44:48.241258"], ["updated_at", "2020-09-03 16:44:48.241258"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRide Create (0.3ms)[0m  [1m[32mINSERT INTO "rides" ("driver_id", "rider_id", "datetime", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["driver_id", 1], ["rider_id", 2], ["datetime", "2020-07-20 04:45:00"], ["description", "Saturday morning ride from Dino Lots at 7:00AM"], ["created_at", "2020-09-03 16:44:48.247427"], ["updated_at", "2020-09-03 16:44:48.247427"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRide Create (0.3ms)[0m  [1m[32mINSERT INTO "rides" ("driver_id", "rider_id", "datetime", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["driver_id", 1], ["rider_id", 3], ["datetime", "2020-08-20 04:45:00"], ["description", "Saturday morning ride from Dino Lots at 8:00AM"], ["created_at", "2020-09-03 16:44:48.251158"], ["updated_at", "2020-09-03 16:44:48.251158"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" LIMIT $1[0m  [["LIMIT", 11]]

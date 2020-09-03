@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2020_06_22_194224) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "drivers", force: :cascade do |t|
     t.string "name"
     t.string "phone"
@@ -37,8 +40,8 @@ ActiveRecord::Schema.define(version: 2020_06_22_194224) do
   end
 
   create_table "rides", force: :cascade do |t|
-    t.integer "driver_id", null: false
-    t.integer "rider_id", null: false
+    t.bigint "driver_id", null: false
+    t.bigint "rider_id", null: false
     t.datetime "datetime"
     t.string "description"
     t.datetime "created_at", precision: 6, null: false

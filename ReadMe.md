@@ -31,18 +31,18 @@ Traffic up the ski areas in Colorado has gotten worse year after year and has ma
 
 From the landing page 'http://localhost:3001/#main'decide if you are looking for a ride up to the mountains (this puts you in the Riders category) or wish to provide a ride up to the mountains (this puts you in the Drivers category).
 
-0) If you want to see who is currently offering rides up to the mountain click on the "Drivers" link half-way up the home page. If you want to see who currently needs a ride up to the mountains click on the "Riders" link half-way up the home page.
+If you want to see who is currently offering rides up to the mountain click on the "Drivers" link half-way up the home page. If you want to see who currently needs a ride up to the mountains click on the "Riders" link half-way up the home page.
 
-1A) If you are looking to become a Driver fill out all of your contact info in the "Drivers" column and click "Submit.
+If you are looking to become a Driver fill out all of your contact info in the "Drivers" column and click "Submit.
 
-1B) If you are looking to become a Rider fill out all of your contact info in the "Riders" column and click "Submit.
+If you are looking to become a Rider fill out all of your contact info in the "Riders" column and click "Submit.
 
-2A) After submitting your Driver form info you will be sent to a webpage that lists everyone in the Gnarpool database in need of a ride (Riders) up to the mountains. Filter Riders by either Resort, DateTime, or Ski Pass, to determine who you should contact to give a ride to. Once you have filtered Riders by the desired criteria click on the name of a Rider(s) you are interested in offering a ride to. This will link you to that Rider(s)' show page.
+After submitting your Driver form info you will be sent to a webpage that lists everyone in the Gnarpool database in need of a ride (Riders) up to the mountains. Filter Riders by either Resort, DateTime, or Ski Pass, to determine who you should contact to give a ride to. Once you have filtered Riders by the desired criteria click on the name of a Rider(s) you are interested in offering a ride to. This will link you to that Rider(s)' show page.
 
-2B) After submitting your Rider form info you will be sent to a webpage that lists everyone in the Gnarpool database available to give rides (Drivers) up to the mountains. Filter Drivers by either Resort, DateTime, or Ski Pass, to determine who you should contact to get a ride from. Once you have filtered Drivers by the desired criteria click on the name of a Driver you are interested in riding with. This will link you to that Drivers' show page.
+After submitting your Rider form info you will be sent to a webpage that lists everyone in the Gnarpool database available to give rides (Drivers) up to the mountains. Filter Drivers by either Resort, DateTime, or Ski Pass, to determine who you should contact to get a ride from. Once you have filtered Drivers by the desired criteria click on the name of a Driver you are interested in riding with. This will link you to that Drivers' show page.
 
-3A)Once you are on the Riders' show page create a ride using the form on the right side of the page. Select your name from the dropdown menu for Drivers and select the name of the Rider who wish you to give a ride to. Submit the form and the ride info will populate the column listed as "Created Rides". 
+Once you are on the Riders' show page create a ride using the form on the right side of the page. Select your name from the dropdown menu for Drivers and select the name of the Rider who wish you to give a ride to. Submit the form and the ride info will populate the column listed as "Created Rides". 
 
-3B)Once you are on the Drivers' show page create a ride using the form on the right side of the page. Select your name from the dropdown menu for Rider and select the name of the Driver who you wish you to get a ride from. Submit the form and the ride info will populate the column listed as "Created Rides".
+Once you are on the Drivers' show page create a ride using the form on the right side of the page. Select your name from the dropdown menu for Rider and select the name of the Driver who you wish you to get a ride from. Submit the form and the ride info will populate the column listed as "Created Rides".
 
-4) Use the contact info on the Driver/Rider show pages to obtain relevant contact info to make the your "Gnarpool" ride happen. 
+Use the contact info on the Driver/Rider show pages to obtain relevant contact info to make the your "Gnarpool" ride happen. 
